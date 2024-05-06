@@ -36,7 +36,7 @@ This project creates an **Auth-Enabled** home automation system controlled via W
 2. The NodeMCU receives the message, validates your credentials, parses the command, and executes the action.
 3. The NodeMCU sends a confirmation message back to your WhatsApp account, notifying you of the executed action.
 
-## Screenshots for reference
+## Screenshot for reference
 ![Home automation whatsapp image](https://github.com/Bavadharini-G-S/Auth-Enabled-Home-Automation/assets/115529616/2a55281f-25af-4814-bc90-8a1a329e9cef)
 
 
