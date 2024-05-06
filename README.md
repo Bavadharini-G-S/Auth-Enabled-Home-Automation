@@ -18,40 +18,25 @@ This project creates an **Auth-Enabled** home automation system controlled via W
 
 ## Software Setup
 
-1. Create a Twilio account and connect to whatsapp sandbox.
-2. Create a ThingESP Account and create a project
-3. Configure your NodeMCU
-4. Install the required libraries:
-    - ESP8266WiFi
-    - ESP8266HTTPClient
-5. Implement the following functionalities in your NodeMCU code:
-    - Secure user authentication
-    - Connect to your WiFi network.
-    - Establish a secure connection with Twilio API using your credentials.
-    - Define functions to control relay outputs based on received commands.
-    - Parse incoming WhatsApp messages for commands (e.g., "turn on light").
-    - Implement logic to validate user authentication (**not included in this example**)
-    - Based on the validated command and user, execute the corresponding action (activate/deactivate relay).
-    - Send a confirmation message back to the user via Twilio API.
-6. Upload the firmware code to your NodeMCU.
+1. Create a ThingESP account and set up a new project.
+2. Update the Username, Project Name, and Project device credentials in the _"Home_Automation.io"_ code.
+3. Signup in Twilio and create an account
+4. Go to WhatsApp sandbox settings and activate your sandbox.
+5. Copy the Endpoint URL for Twilio in ThingESP and paste it into the Sandbox configuration tab.
+6. Modify the WiFi SSID and password in the _"Home_Automation.io"_ code.
+7. Upload the code to your NodeMCU.
+
+## Workflow
+![Home automation workflow](https://github.com/Bavadharini-G-S/Auth-Enabled-Home-Automation/assets/115529616/41f7b79c-9111-48bb-b5e6-63b52c45d760)
 
 
-**Usage:**
+## Usage:
 
-1. Send a WhatsApp message containing your **authentication credentials** (**not included in this example**) followed by the desired home automation command (e.g., "turn on light") to the designated Twilio phone number.
-2. The NodeMCU receives the message, validates your credentials (**not included in this example**), parses the command, and executes the action.
+1. Send a WhatsApp message containing your **Passcode** followed by the desired home automation command to the designated Twilio phone number in the format **"Passcode,command"**.
+2. The NodeMCU receives the message, validates your credentials, parses the command, and executes the action.
 3. The NodeMCU sends a confirmation message back to your WhatsApp account, notifying you of the executed action.
 
-**Additional Notes:**
-
-* This is a basic example and can be further enhanced with features like:
-    - Support for multiple users with individual access controls.
-    - Complex command logic for controlling various devices.
-    - User interface for managing authentication credentials (**not included in this example**).
-* Remember to replace placeholder values in the code with your actual Twilio credentials and WiFi network details.
-* Secure user authentication is crucial for a production-ready system (**not included in this example**). Explore secure authentication methods like JWT or OAuth for robust user access control.
+## Screenshots for reference
+![Home automation whatsapp image](https://github.com/Bavadharini-G-S/Auth-Enabled-Home-Automation/assets/115529616/2a55281f-25af-4814-bc90-8a1a329e9cef)
 
 
-**Disclaimer:**
-
-This is an educational guide. It is recommended to consult relevant resources and tutorials for detailed information on NodeMCU programming, Twilio API integration, and secure user authentication practices.
