@@ -19,11 +19,11 @@ This project creates an **Auth-Enabled** home automation system controlled via W
 ## Software Setup
 
 1. Create a ThingESP account and set up a new project.
-2. Update the Username, Project Name, and Project device credentials in the _"Home_Automation.io"_ code.
+2. Update the Username, Project Name, and Project device credentials in the _"Home_Automation.ino"_ code.
 3. Signup in Twilio and create an account
 4. Go to WhatsApp sandbox settings and activate your sandbox.
 5. Copy the Endpoint URL for Twilio in ThingESP and paste it into the Sandbox configuration tab.
-6. Modify the WiFi SSID and password in the _"Home_Automation.io"_ code.
+6. Modify the WiFi SSID and password in the _"Home_Automation.ino"_ code.
 7. Upload the code to your NodeMCU.
 
 ## Workflow
