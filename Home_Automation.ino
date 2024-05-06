@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <ThingESP.h>?
 
-ThingESP8266 thing("Bava", "HomeAutomation", "ESP8266");  //Username, Project Name, Project's device credentials
+ThingESP8266 thing("", "", "");  //Enter Username, Project Name, Project's device credentials
 
 int LIGHT = D0;
 int FAN = D1;
@@ -17,7 +17,7 @@ void setup() {
   pinMode(FAN, OUTPUT);
   pinMode(LSWITCH, INPUT);
   pinMode(FSWITCH, INPUT);
-  thing.SetWiFi("---", "hello123");  //Wifi Username,Password
+  thing.SetWiFi("", "");  //Enter Wifi Username,Password
   thing.initDevice();
 }
 
@@ -26,7 +26,7 @@ String HandleResponse(String Input) {
   int delimiterIndex = Input.indexOf(",");
   String code = Input.substring(0, delimiterIndex);
   String query = Input.substring(delimiterIndex + 1);
-  if (code == "homaut") {
+  if (code == "homaut") {     //modify the passcode if necessary
     if (query == "light on") {
       digitalWrite(LIGHT, 0);
       return "Done: Light Turned ON";
